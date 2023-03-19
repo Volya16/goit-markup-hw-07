@@ -156,11 +156,32 @@ color: var(--color-brand-dark);
     margin-left: auto;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .header-list {
+        padding: 16px 0;
+    }
+}
+
 .header-address {
 display: flex;
 gap: 40px;
-
 }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .header-address {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* @media screen and (min-width: 1200px) {
+    .header-address {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        }   
+} */
 
 .address {
     font-weight: 400;
@@ -836,6 +857,7 @@ gap: 40px;
 }
 
 .sub-input {
+    width: 100%;
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.04em;
@@ -843,22 +865,21 @@ gap: 40px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    width: 398px;
-    height: 40px;
-    padding: 8px 0 8px 16px;
+    padding: 8px 16px;
     color: var(--color-background-primery);
 }
 
 @media screen and (max-width: 767px) {
     .sub-input {
         margin-bottom: 16px;
+        max-width: 398px;
     }
     
 }
 
 @media screen and (min-width: 768px) {
     .sub-input {
-        max-width: 248px;
+        width: 264px;
         margin-right: 24px;
     }
     
@@ -866,7 +887,6 @@ gap: 40px;
 
 @media screen and (min-width: 1200px) {
     .sub-input {
-        width: 264px;
         margin-right: 24px;
     }
 }
