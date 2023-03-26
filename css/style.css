@@ -545,10 +545,19 @@ gap: 40px;
 
 @media screen and (min-width: 768px) {
     .team-list {
-    gap: 64px 24px;
+        width: 552px;
+        margin: 0 auto;
+        gap: 64px 24px;
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .team-list {
+        width: 1128px;
+        margin: 0 auto;
+        gap: 24px;
+    }
+}
 
 .team-item {
     background-color: var(--color-primery-inverted);
