@@ -233,31 +233,34 @@ ul {
 }
 
 
-/* .mobile-menu {
+/* Mobile-menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    /* max-width: 428px; */
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    
-} */
+    padding: 80px 40px 40px;
+    gap: 20px;
+    background-color: var(--color-background-primery);
+    transform: translateX(100%);
+    transition: transform var(--transition);
+}
+
+
+.mobile-menu.is-open {
+    transform: translateX(0);
+}
 
 @media screen and (min-width: 768px) {
     .mobile-menu {
         display: none;
     }
-}
-
-/* Mobile-menu */
-.mobile-menu {
-    border: 1px solid red;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    max-width: 428px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 24px 40px 40px;
-    background-color: var(--color-background-primery);
 }
 
 .menu-close {
@@ -314,6 +317,10 @@ ul {
     color: var(--color-brand-dark);
 }
 
+.mobile-link.active {
+    color: var(--color-brand-dark);
+}
+
 .mobile-menu-contact {
 }
 
@@ -346,19 +353,25 @@ ul {
     outline: none;
 }
 
-/* .socials-list {
+.socials-mobile {
     display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 8px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 56px;
 }
 
-.socials-item {
+@media screen and (max-width:407px) {
+    .socials-mobile {
+        gap: 40px;
+    }
+}
+
+.socials-mobile-item {
     width: 40px;
     height: 40px;
 }
 
-.socials-link {
+.socials-mobile-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -371,15 +384,15 @@ ul {
     transition: background-color var(--transition);
 }
 
-.socials-link:hover,
+.socials-mobile-link:hover,
 .socials-link:focus {
     background-color: var(--color-brand-dark);
 }
 
-.socials-icon {
-    width: 16px;
-    height: 16px;
-} */
+.socials-mobile-icon {
+    width: 24px;
+    height: 24px;
+} 
 
 /* Hero section */
 .first-section {
