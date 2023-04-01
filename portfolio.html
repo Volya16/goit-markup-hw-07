@@ -23,7 +23,7 @@
   <body>
     <header class="border-header">
       <div class="container">
-        <div class="header-container-desktop">
+        <div class="header-container">
           <nav class="header-nav">
             <a class="logo" href="./index.html"
               ><span class="logo-part">Web</span>Studio</a
@@ -62,20 +62,77 @@
             </svg>
           </button>
         </div>
-        <!-- <div class="mobile-menu js-menu-container">
-          <button class="modal-close" type="button">
+        <div class="mobile-menu js-menu-container">
+          <button class="modal-close js-close-menu" type="button">
             <svg class="modal-icon">
               <use href="./images/icons.svg#icon-modalclose"></use>
-            </svg> 
+            </svg>
           </button>
-        </div>-->
+          <ul class="mobile-menu-list">
+            <li class="mobile-items">
+              <a class="mobile-link" href="./index.html">Studio</a>
+            </li>
+            <li class="mobile-items">
+              <a class="mobile-link active" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mobile-items">
+              <a class="mobile-link" href="">Contacts</a>
+            </li>
+          </ul>
+          <div class="mobile-menu-contact">
+            <ul class="address-menu-list">
+              <li class="mobile-items">
+                <a class="mobile-tel address" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobile-items">
+                <a class="mobile-email address" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="socials-mobile">
+              <li class="socials-mobile-item">
+                <a class="socials-mobile-link" href="#">
+                  <svg class="socials-mobile-icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-mobile-item">
+                <a class="socials-mobile-link" href="#">
+                  <svg class="socials-mobile-icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-mobile-item">
+                <a class="socials-mobile-link" href="#">
+                  <svg class="socials-mobile-icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-mobile-item">
+                <a class="socials-mobile-link" href="#">
+                  <svg class="socials-mobile-icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
       <section class="section filter-section">
         <div class="container">
           <h1 class="visually-hidden">Portfolio</h1>
-          <ul class="list-buttons">
+          <!-- <ul class="list-buttons">
             <li><button class="filter-button" type="button">All</button></li>
             <li>
               <button class="filter-button" type="button">Web Site</button>
@@ -85,18 +142,39 @@
             <li>
               <button class="filter-button" type="button">Marketing</button>
             </li>
-          </ul>
+          </ul> -->
           <ul class="list-items">
             <li class="filter-card">
               <a class="item-filter" href="#">
                 <div class="card-thumb">
-                  <img
-                    class="filter-photo"
-                    src="./images/bankingapp.jpg"
-                    width="360"
-                    height="300"
-                    alt="Banking App"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/bankingapp-mob.jpg    1x,
+                        ./images/bankingapp-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/bankingapp-tb.jpg    1x,
+                        ./images/bankingapp-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/bankingapp-dskt.jpg    1x,
+                        ./images/bankingapp-dskt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="filter-photo"
+                      src="./images/bankingapp.jpg"
+                      alt="Banking App"
+                    />
+                  </picture>
                   <div class="overlay-cards">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -114,13 +192,34 @@
             <li class="filter-card">
               <a class="item-filter" href="#">
                 <div class="card-thumb">
-                  <img
-                    class="filter-photo"
-                    src="./images/cashlesspayment.jpg"
-                    width="360"
-                    height="300"
-                    alt="Caschless Payment"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/cashlesspayment-mob.jpg    1x,
+                        ./images/cashlesspayment-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/cashlesspayment-tb.jpg    1x,
+                        ./images/cashlesspayment-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/cashlesspayment-dskt.jpg    1x,
+                        ./images/cashlesspayment-dskt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="filter-photo"
+                      src="./images/cashlesspayment.jpg"
+                      alt="Caschless Payment"
+                    />
+                  </picture>
                   <div class="overlay-cards">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -138,13 +237,34 @@
             <li class="filter-card">
               <a class="item-filter" href="#"
                 ><div class="card-thumb">
-                  <img
-                    class="filter-photo"
-                    src="./images/meditaionapp.jpg"
-                    width="360"
-                    height="300"
-                    alt="Meditaion App"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/meditaionapp-mob.jpg    1x,
+                        ./images/meditaionapp-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/meditaionapp-tb.jpg    1x,
+                        ./images/meditaionapp-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/meditaionapp-dskt.jpg    1x,
+                        ./images/meditaionapp-dskt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="filter-photo"
+                      src="./images/meditaionapp.jpg"
+                      alt="Meditaion App"
+                    />
+                  </picture>
                   <div class="overlay-cards">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -162,13 +282,34 @@
             <li class="filter-card">
               <a class="item-filter" href="#">
                 <div class="card-thumb">
-                  <img
-                    class="filter-photo"
-                    src="./images/taxi.jpg"
-                    width="360"
-                    height="300"
-                    alt="Taxi Service"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/taxi-mob.jpg    1x,
+                        ./images/taxi-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/taxi-tb.jpg    1x,
+                        ./images/taxi-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/taxi-dskt.jpg    1x,
+                        ./images/taxi-dskt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="filter-photo"
+                      src="./images/taxi.jpg"
+                      alt="Taxi Service"
+                    />
+                  </picture>
                   <div class="overlay-cards">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -186,13 +327,34 @@
             <li class="filter-card">
               <a class="item-filter" href="#">
                 <div class="card-thumb">
-                  <img
-                    class="filter-photo"
-                    src="./images/instastories.jpg"
-                    width="360"
-                    height="300"
-                    alt="Screen Illustrations"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/screenillustrations-mob.jpg    1x,
+                        ./images/screenillustrations-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/screenillustrations-tb.jpg    1x,
+                        ./images/screenillustrations-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/screenillustrations-dskt.jpg    1x,
+                        ./images/screenillustrations-dskt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="filter-photo"
+                      src="./images/screenillustrations.jpg"
+                      alt="Screen Illustrations"
+                    />
+                  </picture>
                   <div class="overlay-cards">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -210,13 +372,34 @@
             <li class="filter-card">
               <a class="item-filter" href="#">
                 <div class="card-thumb">
-                  <img
-                    class="filter-photo"
-                    src="./images/onlinecourses.jpg"
-                    width="360"
-                    height="300"
-                    alt="Online Courses"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/onlinecourses-mob.jpg    1x,
+                        ./images/onlinecourses-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/onlinecourses-tb.jpg    1x,
+                        ./images/onlinecourses-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/onlinecourses-dskt.jpg    1x,
+                        ./images/onlinecourses-dskt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="filter-photo"
+                      src="./images/onlinecourses.jpg"
+                      alt="Online Courses"
+                    />
+                  </picture>
                   <div class="overlay-cards">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -234,13 +417,34 @@
             <li class="filter-card">
               <a class="item-filter" href="#">
                 <div class="card-thumb">
-                  <img
-                    class="filter-photo"
-                    src="./images/instastories.jpg"
-                    width="360"
-                    height="300"
-                    alt="Instagram Stories Concept"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/instastories-mob.jpg    1x,
+                        ./images/instastories-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/instastories-tb.jpg    1x,
+                        ./images/instastories-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/instastories-dskt.jpg    1x,
+                        ./images/instastories-dskt@2x.jpg 2x
+                      "
+                      media="min-width: 1200px"
+                    />
+                    <img
+                      class="filter-photo"
+                      src="./images/instastories.jpg"
+                      alt="Instagram Stories Concept"
+                    />
+                  </picture>
                   <div class="overlay-cards">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -258,13 +462,34 @@
             <li class="filter-card">
               <a class="item-filter" href="#">
                 <div class="card-thumb">
-                  <img
-                    class="filter-photo"
-                    src="./images/organicfood.jpg"
-                    width="360"
-                    height="300"
-                    alt="Organic Food"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/organicfood-mob.jpg    1x,
+                        ./images/organicfood-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/organicfood-tb.jpg    1x,
+                        ./images/organicfood-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/organicfood-dskt.jpg    1x,
+                        ./images/organicfood-dskt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="filter-photo"
+                      src="./images/organicfood.jpg"
+                      alt="Organic Food"
+                    />
+                  </picture>
                   <div class="overlay-cards">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -282,13 +507,34 @@
             <li class="filter-card">
               <a class="item-filter" href="#"
                 ><div class="card-thumb">
-                  <img
-                    class="filter-photo"
-                    src="./images/cupcoffee.jpg"
-                    width="360"
-                    height="300"
-                    alt="Fresh Coffee"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/cupcoffee-mob.jpg    1x,
+                        ./images/cupcoffee-mob@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/cupcoffee-tb.jpg    1x,
+                        ./images/cupcoffee-tb@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/cupcoffee-dskt.jpg    1x,
+                        ./images/cupcoffee-dskt@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      class="filter-photo"
+                      src="./images/cupcoffee.jpg"
+                      alt="Fresh Coffee"
+                    />
+                  </picture>
                   <div class="overlay-cards">
                     <p class="overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
