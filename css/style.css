@@ -300,9 +300,6 @@ ul {
     gap: 40px;
 }
 
-.mobile-items {
-}
-
 .mobile-link {
     font-weight: 700;
     font-size: 36px;
@@ -320,9 +317,6 @@ ul {
 
 .mobile-link.active {
     color: var(--color-brand-dark);
-}
-
-.mobile-menu-contact {
 }
 
 .address-menu-list {
@@ -915,9 +909,6 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     }
 }
 
-.logo-container {
-}
-
 @media screen and (max-width: 767px) {
     .logo-container {
         width: 268px;
@@ -968,19 +959,11 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     max-width: 264px;
 }
 
-.footer-adress {
-    
-}
-
 @media screen and (max-width: 767px) {
     .footer-adress {
         text-align: center;
         margin-bottom: 72px;
     }
-}
-
-@media screen and (min-width: 768px) {
-    .logo-container {}
 }
 
 @media screen and (min-width: 1200px) {
